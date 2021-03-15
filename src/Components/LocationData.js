@@ -6,7 +6,7 @@ function LocationData({ data, search }) {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     checkIfExist();
-  }, []);
+  }, [search]);
   const checkIfExist = () => {
     if (search !== "") {
       if (
@@ -24,7 +24,7 @@ function LocationData({ data, search }) {
     <>
       {data.bookable & isVisible ? (
         <div className="individualBlocker">
-          <div className="blackBar"></div>
+          <div className="verticalLine"></div>
           <div className="contentAndInfo">
             <div className="headingTitle">
               {data.name + "    "}

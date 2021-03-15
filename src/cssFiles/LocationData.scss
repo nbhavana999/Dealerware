@@ -40,7 +40,7 @@
   @include size(80px, 300px);
   @include padding(0, 25px, 0, 25px);
 }
-.blackBar {
+.verticalLine {
   background-color: black;
   @include size(50px, 2px);
   border-radius: 1px;
