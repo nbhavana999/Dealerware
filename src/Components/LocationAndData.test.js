@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import LocationAndData from "../Components/LocationAndData";
 import "../cssFiles/LocationAndData.scss";
 
 it("renders without crashing", () => {
