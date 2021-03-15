@@ -1,0 +1,65 @@
+@mixin flexRow {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+@mixin margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin flex-direction($direction) {
+  @if $direction == column {
+    -webkit-flex-direction: vertical;
+    -moz-flex-direction: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  } @else {
+    -webkit-flex-direction: horizontal;
+    -moz-flex-direction: horizontal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+.individualBlocker {
+  @include flexRow();
+  @include size(80px, 300px);
+  @include padding(0, 25px, 0, 25px);
+}
+.blackBar {
+  background-color: black;
+  @include size(50px, 2px);
+  border-radius: 1px;
+}
+.headingTitle {
+  font-weight: bold;
+  @include font-size(12px);
+}
+.contentAndInfo {
+  @include margin(0, 0, 0, 20px);
+  @include flexRow();
+  @include flex-direction(column);
+}
+
+.locationDesc {
+  color: grey;
+  @include font-size(10px);
+  @include margin(5px, 0, 0, 3px);
+}
+.locateContent {
+  @include flexRow();
+}

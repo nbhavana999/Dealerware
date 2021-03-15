@@ -1,0 +1,51 @@
+@mixin flexRow {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin margin-left($size) {
+  margin-left: $size;
+}
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+.header {
+  @include flexRow();
+  border-width: 1px 0px 1px 0px;
+  border-style: solid;
+  border-color: grey;
+  @include padding(5px, 100px, 5px, 100px);
+}
+.fontSizeForNav {
+  @include font-size(25px);
+  @include margin-left(20px);
+}
+
+.fontSizeForNavFooter {
+  @include font-size(10px);
+  @include margin-left(5px);
+  font-weight: bold;
+  align-self: flex-end;
+  @include padding(0, 0, 5px, 0);
+}
+.design {
+  flex-grow: 1;
+}
+.pillDesign {
+  @include font-size(10px);
+  font-weight: bold;
+  border: 2px solid;
+  border-radius: 20px;
+  @include padding(7px, 20px, 7px, 20px);
+}
+.helpSection {
+  @include margin-left(10px);
+  @include font-size(10px);
+  font-weight: bold;
+}
