@@ -4,7 +4,6 @@ import App from "./App";
 
 test("full app rendering/navigating", () => {
   render(<App />, { wrapper: MemoryRouter });
-
-  // verify page content for expected route
+ // verify page content for expected route
   expect(screen.getByText(/Choose Location/i)).toBeInTheDocument();
 });
